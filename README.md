@@ -1,6 +1,6 @@
-## Mentoring Program
+# Mentoring Program
 
-This is project for GIST mentoring program 2022
+## This is project for GIST mentoring program 2022
 
 Schedule : Every Wednesday 10:30 AM
 
