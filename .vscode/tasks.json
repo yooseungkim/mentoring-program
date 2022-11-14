@@ -8,7 +8,7 @@
         "-fdiagnostics-color=always",
         "-g",
         "main.cpp",
-        "add.cpp",
+        "calc.cpp",
         "-o",
         "${fileDirname}/${fileBasenameNoExtension}"
       ],
