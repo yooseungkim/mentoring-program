@@ -27,13 +27,13 @@ Final Goal :
 
 (Or, in `./vscode/tasks.json`, add `.cpp` files in the `args` and run C/C++ file)
 
+#### How to use Github
 
-#### How to use Github 
-1. `clone` the repository (e.g.`git clone https://github.com/yooseungkim/mentoring-program.git`) 
-2. change to your `branch` (e.g. `git checkout changwan`) 
-3. change the codes 
-4. `commit` and `push` to your `branch` 
-5. `pull request` to `merge` to the `main` 
+1. `clone` the repository (e.g.`git clone https://github.com/yooseungkim/mentoring-program.git`)
+2. change to your `branch` (e.g. `git checkout changwan`)
+3. change the codes
+4. `commit` and `push` to your `branch`
+5. `pull request` to `merge` to the `main`
 6. Resolve some errors in `merge` stage
-7. In your branch, `pull` the main branch (e.g. `git pull origin/main` (on your branch))
+7. In your branch, `pull` the main branch (e.g. `git pull origin main` (on your branch))
 8. Then your branch has the same code with `main`

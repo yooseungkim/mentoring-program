@@ -1,3 +1,4 @@
+
 #include "calc.h"
 
 Calc::Calc()
@@ -6,6 +7,13 @@ Calc::Calc()
 int Calc::add(int x, int y)
 {
     return x + y;
+}
+
+void Calc::swap(int &x, int &y)
+{
+    int temp = x;
+    x = y;
+    y = temp;
 }
 
 int Calc::sub(int x, int y)
