@@ -1,24 +1,30 @@
+#include <iostream>
 #include "calc.h"
 
-Calc::Calc()
+//using namespace std; NO USE
+
+int Calc::add(int a, int b)
 {
-}
-int Calc::add(int x, int y)
-{
-    return x + y;
+    return (a+b);
 }
 
-int Calc::sub(int x, int y)
+int Calc::sub(int a, int b)
 {
-    return x - y;
+    return (a-b);
 }
 
-int Calc::mul(int x, int y)
+int Calc::mul(int a, int b)
 {
-    return x * y;
+    return a*b;
 }
 
-double Calc::div(int x, int y)
+double Calc::div(int a, int b)
 {
-    return x / y;
+    return a/b;
+}
+
+void Calc::view(void)
+{
+    std::cout << "e: " << this->e << std::endl;
+    std::cout << "pi: " << this->pi << std::endl;
 }
