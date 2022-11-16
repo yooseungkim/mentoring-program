@@ -2,15 +2,17 @@
 #include "calc.h"
 
 using namespace std;
-
 int main()
 {
-    Calc myCalc = Calc();
-    cout << myCalc.add(3, 5) << endl;
-    cout << myCalc.sub(5, 3) << endl;
-    cout << myCalc.mul(3, 5) << endl;
-    cout << myCalc.div(10, 3) << endl;
-    cout << "hello world" << endl;
-    cout << 1+2 << endl;
+    int n1 = 3, n2 = 7;
+    Calc c = Calc();
+    /*
+    cout << c.add(n1,n2) << endl;
+    cout << c.sub(n1,n2) << endl;
+    cout << c.mul(n1,n2) << endl;
+    cout << c.div(n1,n2) << endl;
+    cout << c.pi << endl;
+    */
+    c.view();
     return 0;
 }
