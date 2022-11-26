@@ -3,15 +3,24 @@
 
 class Calc
 {
-public:
     double e = 2.718;
     double pi = 3.14;
+    double myVar = 0;
 
-    int add(int, int);
-    int sub(int, int);
-    int mul(int, int);
-    int div(int, int);
-    int mod(int, int);
-    void view(void);
+    template <typename T1, typename T2> // two variables can have different types
+    double add(T1, T2);                 // change to double
+    template <typename T1, typename T2>
+    double sub(T1, T2); // change to double
+    template <typename T1, typename T2>
+    double mul(T1, T2); // change to double
+    double div(double, double);
+    int mod(double, double);
+
+public:
+    void view();
+    void start();
+    double getMyVar();
+    void setMyVar(double);
 };
+
 #endif

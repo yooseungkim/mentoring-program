@@ -1,64 +1,32 @@
 #include <iostream>
-// #include "calc.h"
+#include "calc.h"
 // using namespace std; NO USE
-
-template <typename T>
-
-class Calc
+template <typename T1, typename T2>
+double Calc::add(T1 a, T2 b)
 {
-private: //안써도됨
-    double e = 2.718;
-    double pi = 3.14;
-    double myVar = 0;
-
-    // int add(int, int);
-    // double add(double, double);
-    int sub(int, int);
-    int mul(int, int);
-    int div(int, int);
-    int mod(int, int);
-
-public:
-    void view(void);
-    void start(void);
-    double getMyVar(void);
-    void setMyVar(double);
-    T add(T, T);
-    // double add(double, double);
-};
-
-T Calc::add(T a, T b)
-{
-    // std::cout << "integer" << std::endl;
     return (a + b);
 }
 
-/*
-double Calc::add(double a, double b)
-{
-    std::cout << "double" << std::endl;
-    return (a+b);
-}
-*/
-
-int Calc::sub(int a, int b)
+template <typename T1, typename T2>
+double Calc::sub(T1 a, T2 b)
 {
     return (a - b);
 }
 
-int Calc::mul(int a, int b)
+template <typename T1, typename T2>
+double Calc::mul(T1 a, T2 b)
 {
     return a * b;
 }
 
-int Calc::div(int a, int b)
+double Calc::div(double a, double b)
 {
     return a / b;
 }
 
-int Calc::mod(int a, int b)
+int Calc::mod(double a, double b)
 {
-    return a % b;
+    return ((int)a) % ((int)b); // do explicit typecasting
 }
 
 void Calc::view(void)
@@ -69,7 +37,7 @@ void Calc::view(void)
 
 void Calc::start(void)
 {
-    int x, y;
+    double x, y; // get all numbers as double (not integer)
     char md;
     std::cout << "Enter the what you want to calculate : ";
     std::cin >> x >> md >> y;
