@@ -1,4 +1,3 @@
-#include <iostream>
 #include "calc.h"
 // using namespace std; NO USE
 
@@ -13,7 +12,7 @@ Calc::Calc(double var)
 
 Calc::~Calc()
 {
-    std::cout << "Calculator Destructed" << std::endl;
+    // std::cout << "Calculator Destructed" << std::endl;
 }
 template <typename T1, typename T2>
 double Calc::add(T1 a, T2 b)

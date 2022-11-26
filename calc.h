@@ -1,7 +1,8 @@
-#ifndef ADD_H
-#define ADD_H
+#ifndef CALC_H
+#define CALC_H
 
 #include <vector>
+#include <iostream>
 class Calc
 {
     double e; // init value is not given here
