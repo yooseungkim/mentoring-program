@@ -18,9 +18,14 @@ int Calc::mul(int a, int b)
     return a*b;
 }
 
-double Calc::div(int a, int b)
+int Calc::div(int a, int b)
 {
     return a/b;
+}
+
+int Calc::mod(int a, int b)
+{
+    return a%b;
 }
 
 void Calc::view(void)
