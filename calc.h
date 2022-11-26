@@ -4,13 +4,14 @@
 class Calc
 {
 public:
-    Calc();
+    double e = 2.718;
+    double pi = 3.14;
 
-    int add(int x, int y);
-    void swap(int &x, int &y);
-    int sub(int x, int y);
-    int mul(int x, int y);
-    double div(int x, int y);
+    int add(int, int);
+    int sub(int, int);
+    int mul(int, int);
+    int div(int, int);
+    int mod(int, int);
+    void view(void);
 };
-
 #endif
