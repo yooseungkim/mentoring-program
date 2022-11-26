@@ -1,6 +1,20 @@
 #include <iostream>
 #include "calc.h"
 // using namespace std; NO USE
+
+Calc::Calc(double var)
+    : e(2.718), pi(3.14), myVar(var), last(0) // initalize attributes
+{
+    // this->e = 2.718
+    // this->pi = 3.14
+    // this->myVar = var;
+    std::cout << "New Calculator" << std::endl;
+}
+
+Calc::~Calc()
+{
+    std::cout << "Calculator Destructed" << std::endl;
+}
 template <typename T1, typename T2>
 double Calc::add(T1 a, T2 b)
 {
@@ -42,31 +56,37 @@ void Calc::start(void)
     std::cout << "Enter the what you want to calculate : ";
     std::cin >> x >> md >> y;
     std::cout << "the result : ";
+    double result;
     switch (md)
     {
     case '+':
-        std::cout << this->add(x, y) << std::endl;
+        result = this->add(x, y);
         break;
     case '-':
-        std::cout << this->sub(x, y) << std::endl;
+        result = this->sub(x, y);
         break;
     case '/':
-        std::cout << this->div(x, y) << std::endl;
+        result = this->div(x, y);
         break;
     case '*':
-        std::cout << this->mul(x, y) << std::endl;
+        result = this->mul(x, y);
         break;
     case '%':
-        std::cout << this->mod(x, y) << std::endl;
+        result = this->mod(x, y);
         break;
     default:
         std::cout << "Please enter correctly!" << std::endl;
         break;
     }
+    std::cout << "Result : " << result << std::endl;
+
+    this->history.push_back(result); // add to history
+    this->last = result;             // save the last result
+
     char ans;
-    std::cout << "Do you want to use again? (Enter Y or N)" << std::endl;
+    std::cout << "Do you want to use again? (Enter Y/y or N)" << std::endl;
     std::cin >> ans;
-    if (ans == 'Y')
+    if (ans == 'Y' or ans == 'y')
     {
         this->start();
     }
@@ -85,4 +105,18 @@ double Calc::getMyVar(void)
 void Calc::setMyVar(double newVar)
 {
     this->myVar = newVar;
+}
+
+void Calc::printHistory()
+{
+    // for (int i = 0; i < this->history.size(); i++)
+    // {
+    //     std::cout << this->history[i] << ", ";
+    // }
+    std::cout << "History : ";
+    for (double res : this->history)
+    {
+        std::cout << res << ", ";
+    }
+    std::cout << std::endl;
 }

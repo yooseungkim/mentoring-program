@@ -4,9 +4,11 @@
 using namespace std;
 int main()
 {
-    Calc c = Calc();
+    Calc c = Calc(3.3);
 
     c.start();
+
+    c.printHistory();
 
     return 0;
 }
