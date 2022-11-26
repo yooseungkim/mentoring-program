@@ -4,15 +4,32 @@
 using namespace std;
 int main()
 {
-    int n1 = 3, n2 = 7;
+    int x, y;
+    char md;
     Calc c = Calc();
-    /*
-    cout << c.add(n1,n2) << endl;
-    cout << c.sub(n1,n2) << endl;
-    cout << c.mul(n1,n2) << endl;
-    cout << c.div(n1,n2) << endl;
-    cout << c.pi << endl;
-    */
-    c.view();
+    cout << "Enter the what you want to calculate : ";
+    cin >> x >> md >> y;
+    cout << "the result : ";
+    switch (md)
+    {
+    case '+':
+        cout << c.add(x,y) << endl;
+        break;
+    case '-':
+        cout << c.sub(x,y) << endl;
+        break;
+    case '/':
+        cout << c.div(x,y) << endl;
+        break;
+    case '*':
+        cout << c.mul(x,y) << endl;
+        break;
+    case '%':
+        cout << c.mod(x,y) << endl;
+        break;
+    default:
+        break;
+    }
+
     return 0;
 }
