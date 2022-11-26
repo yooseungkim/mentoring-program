@@ -1,11 +1,9 @@
 #include <iostream>
-#include "calc.h"
+#include "calc.cpp"
 
 using namespace std;
 int main()
 {
-    int x, y;
-    char md;
     Calc c = Calc();
     cout << "Enter the what you want to calculate : ";
     cin >> x >> md >> y;
