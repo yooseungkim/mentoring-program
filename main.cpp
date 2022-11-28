@@ -1,19 +1,11 @@
 #include <iostream>
-#include "calc.h"
-#include "exam.h"
+#include "utils.h"
 
 using namespace std;
 int main()
 {
-    Calc c = Calc(3.3);
-    c.start();
-    c.printHistory();
+    Utils utils = Utils();
 
-    cout << endl
-         << endl
-         << endl;
-
-    Exam e = Exam();
-
+    utils.start();
     return 0;
 }

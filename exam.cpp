@@ -4,10 +4,7 @@ Exam::Exam(std::string path)
     : n(0), mean(0), stdev(0)
 {
     this->readResults(path);
-    this->printResults();
     this->calculate();
-    this->printStatistics();
-    this->rank(40);
 }
 
 Exam::~Exam()
@@ -20,13 +17,17 @@ void Exam::readResults(std::string path)
 
     std::ifstream input_file(path); // input file stream
 
-    if (!input_file.is_open()) // check if the path is valid
-    {
-        std::cerr << "Could not open the file - " << path << std::endl;
-    }
-
+    // if (!input_file.is_open()) // check if the path is valid
+    // {
+    //     std::cerr << "Could not open the file - " << path << std::endl;
+    // }
+    /////!!!!!!!!
     while (getline(input_file, line)) // read each line (one line at once)
     {
+        // if (line == " ")
+        // {
+        //     break;
+        // }
         this->results.push_back(std::stod(line));
     }
 
@@ -67,7 +68,7 @@ void Exam::calculate()
         squareSum += pow(result - this->mean, 2);
         // squareSum += (result - this->mean) * (result - this->mean);
     }
-    this->stdev = sqrt(squareSum) / (double)n;
+    this->stdev = sqrt(squareSum / (double)n);
 }
 
 void Exam::printStatistics()
@@ -78,10 +79,10 @@ void Exam::printStatistics()
 
 int Exam::rank(double score)
 {
-    double z = (score - this->mean) / this->stdev; // z 변환
-    double percentage = 1 - std::erf(z);           //상위 %
+    double z = (score - this->mean) / this->stdev;                // z 변환
+    double percentage = 0.5 - 0.5 * (std::erf(z / std::sqrt(2))); //상위 %
 
-    int ranking = (int)this->n * percentage + 1; // top rank = 1
+    int ranking = (int)(this->n * percentage); // top rank = 1
 
     std::cout << "Rank : " << ranking << " (" << std::setprecision(4) << percentage * 100 << "%)" << std::endl;
 

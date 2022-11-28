@@ -7,7 +7,7 @@ Calc::Calc(double var)
     // this->e = 2.718
     // this->pi = 3.14
     // this->myVar = var;
-    std::cout << "New Calculator" << std::endl;
+    // std::cout << "New Calculator" << std::endl;
 }
 
 Calc::~Calc()
@@ -52,6 +52,7 @@ void Calc::start(void)
 {
     double x, y; // get all numbers as double (not integer)
     char md;
+    std::cout << "========================================" << std::endl;
     std::cout << "Enter the what you want to calculate : ";
     std::cin >> x >> md >> y;
     std::cout << "the result : ";
@@ -91,7 +92,6 @@ void Calc::start(void)
     }
     else
     {
-        std::cout << "Thank you" << std::endl;
         return;
     }
 }
