@@ -2,7 +2,7 @@
 // #include "calc.h"
 //using namespace std; NO USE
 
-template <typename T>
+
 
 
 class Calc
@@ -25,15 +25,19 @@ public:
     void start(void);
     double getMyVar(void);
     void setMyVar(double);
-    T add(T, T);
+    template <typename T1, typename T2>
+    double add(T1 a, T2 b)
+    {
+        return (a+b);
+    }
     //double add(double, double);
 };
 
-T Calc::add(T a, T b)
-{
-    //std::cout << "integer" << std::endl;
-    return (a+b);
-}
+// T Calc::add(T a, T b)
+// {
+//     //std::cout << "integer" << std::endl;
+//     return (a+b);
+// }
 
 /*
 double Calc::add(double a, double b)
