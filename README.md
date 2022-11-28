@@ -13,7 +13,7 @@ Schedule : Every Wednesday 10:30 AM
 
 Due : December 2nd, 2022
 
-Final Goal :
+Final Goal : Make Utility class for teachers
 
 #### How to launch program
 

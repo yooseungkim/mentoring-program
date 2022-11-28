@@ -1,5 +1,7 @@
 목표: 담임 선생님을 위한 종합 프로그램 (`class Util`)
 
+- Class as a member of another class (V)
+
 1. 계산기 (`class Calc`) - (method, attribute, function overload, reference variable)
 
    1. 사칙 연산 계산 및 출력
